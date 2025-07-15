@@ -46,6 +46,12 @@ results_folder = "results"
 # Shapefile format for admin level 2 
 moz_admin2_shp_results = "moz_admin2_shp.shp"
 
+# Shapefile format for admin level 3 
+moz_admin3_shp_results = "moz_admin3_shp.shp"
+
+# Shapefile format for admin level 3 
+moz_admin1_shp_results = "moz_admin1_shp.shp"
+
 # Environment settings #####################################
 
 # Set ArcGIS workspace to the flood folder (where input data is found). 
@@ -119,6 +125,11 @@ cwd = os.getcwd()
 # Save in the results folder 
 arcpy.CopyFeatures_management(moz_admin2_shp, os.path.join(cwd, results_folder, moz_admin2_shp_results))
 
+# Save admin level 3 shapefile
+arcpy.CopyFeatures_management(moz_admin3_shp, os.path.join(cwd, results_folder, moz_admin3_shp_results))
+
+# Finally, admin level 1
+arcpy.CopyFeatures_management(moz_admin1_shp, os.path.join(cwd, results_folder, moz_admin1_shp_results))
 
 
 
